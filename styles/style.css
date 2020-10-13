@@ -61,8 +61,13 @@ select {
 }
 
 .pad {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pad:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .kick-pad.active {

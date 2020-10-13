@@ -30,7 +30,10 @@
 }
 
 .pad {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .kick-pad.active {
