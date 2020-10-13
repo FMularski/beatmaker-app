@@ -16,6 +16,7 @@ class DrumKit{
         this.currentHihat = './sounds/hihat-acoustic01.wav';
 
         this.selects = document.querySelectorAll('select');
+        this.muteButtons = document.querySelectorAll('.mute');
     }
 
     activePad(){
@@ -87,6 +88,37 @@ class DrumKit{
                 break;
         }
     }
+
+    mute(event){
+        const muteIndex = event.target.getAttribute('data-track');
+        event.target.classList.toggle('active');
+
+        if(event.target.classList.contains('active')){
+            switch(muteIndex){
+                case "0":
+                    this.kickAudio.volume = 0;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 0;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 0;
+                    break;
+            }
+        } else{
+            switch(muteIndex){
+                case "0":
+                    this.kickAudio.volume = 1;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 1;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 1;
+                    break;
+            }
+        }
+    }
 }
 
 const drumKit = new DrumKit();
@@ -105,5 +137,11 @@ drumKit.playButton.addEventListener('click', function(){
 drumKit.selects.forEach(select => {
     select.addEventListener('change', function(event){
         drumKit.changeSound(event);
+    })
+})
+
+drumKit.muteButtons.forEach(button => {
+    button.addEventListener('click', function(event){
+        drumKit.mute(event);
     })
 })

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Electrolize", sans-serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#e66465), to(#9198e5));
   background: linear-gradient(#e66465, #9198e5);
   color: white;
@@ -123,6 +123,8 @@ select {
 }
 
 .controls button {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   padding: 1rem;
   border: none;
   background: #5f5f5f;
@@ -132,6 +134,20 @@ select {
   -webkit-transition: all 0.5 ease;
   transition: all 0.5 ease;
   border-radius: 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e66465), to(#9198e5));
+  background: linear-gradient(#e66465, #9198e5);
+  border: 1px solid white;
+}
+
+.controls button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 2px solid white;
+}
+
+.mute.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#646464), to(#c7c7c7));
+  background: linear-gradient(#646464, #c7c7c7);
 }
 
 .play {
@@ -140,12 +156,14 @@ select {
   width: 10rem;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background: #5f5f5f;
-  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e66465), to(#9198e5));
+  background: linear-gradient(#e66465, #9198e5);
+  border: 1px solid white;
   color: white;
   cursor: pointer;
   margin-top: 3rem;
   border-radius: 3rem;
+  font-family: "Electrolize", sans-serif;
 }
 
 .play.active {
@@ -155,6 +173,7 @@ select {
 .play:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  border: 2px solid white;
 }
 
 @-webkit-keyframes playTrack {
