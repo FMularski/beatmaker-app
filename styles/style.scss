@@ -81,6 +81,8 @@
 }
 
 .play {
+  transition: all 0.3s ease;
+  width: 10rem;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   background: rgb(95, 95, 95);
@@ -88,4 +90,22 @@
   color: white;
   cursor: pointer;
   margin-top: 3rem;
+  border-radius: 3rem;
+
+  &.active {
+    background: rgb(145, 145, 145);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
