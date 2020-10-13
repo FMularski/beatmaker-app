@@ -118,6 +118,25 @@
   }
 }
 
+.tempo {
+  margin: 3rem;
+  width: 30%;
+
+  p {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    text-align: center;
+  }
+}
+
+.tempo-slider {
+  padding: 1rem;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
 @keyframes playTrack {
   from {
     transform: scale(1);
